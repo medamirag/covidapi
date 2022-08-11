@@ -1,0 +1,18 @@
+<h1> {{country}}</h1>
+
+<ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+    <ngb-panel *ngFor="let element of countryDetails">
+      <ng-template ngbPanelTitle>
+        <span>&#9733; <b>{{element.Date}} </b> &#9733;</span>
+      </ng-template>
+      <ng-template ngbPanelContent>
+        <ul>
+        <li>    Active :  {{element.Active}}             </li>
+        <li>    Recovered : {{element.Recovered}}        </li>
+        <li>    Deaths : {{element.Deaths}}              </li>
+        <li>    Confirmed : {{element.Confirmed}}        </li>
+        </ul>
+      </ng-template>
+    </ngb-panel>
+
+  </ngb-accordion>
